@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="../roladmin/css/Admin.css">
+        <link rel="stylesheet" href="../iconos/css/all.min.css">
+        <link rel="stylesheet" href="css/inventario.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css">
+        <title>Productos</title>
+    </head>
+ <body>
+     <div class="container-fluid">
+
+        <!-- Barra de Navegacion -->
+        <div class="color1 row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg ">
+                    <img class="navbar-brand" src="../roladmin/img/log_peluches.png">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html"><i class="fa-solid fa-house"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../errores/404.html"><i class="fa-solid fa-bell"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../iniciovalido.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- 1 columna: Menu de funcionalidades -->
+        <div class="row">
+            <div class="color1 col-md-3  menu">
+                <div class="imgRol text-center mt-4 mb-3">
+                    <img src="../roladmin/img/usuario.png" alt="usuario">
+                </div>
+                <div class="infoRol text-center">
+                    <h5>PREDO SUIZA</h5>
+                    <h6>Administrador</h6>
+                </div>
+                <div class="botonPerfil text-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ver Perfil
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <img src="../roladmin/img/usuario.png" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="display-6">PEDRO SUIZA</h3>
+                                            <h4>Rol Administrador</h4>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary">Modificar Informacion</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu de funcionalidades -->
+                <h3>Pedido</h3>
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="../catalogo/catalogo.html">Catalogo</i></a></li>
+                  <li class="nav-item"><a class="nav-link" href="../roladmin/dashboardadmin.html">Ventas</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../roladmin/pedido.htl">Pedido</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../roladmin/ventas.html">Generar Venta</a></li>
+                </ul>
+        
+                <!-- 2 columna de contenido -->
+        
+                  <h3>Inventario</h3>
+                  <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../roladmin/inventario.html">Inventario</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="producto.html ">Crear Un Producto</a></li>
+                  
+                  </ul>
+        
+                </ul>
+            </div>
+            <div class="col-md-9"> 
+                <div class="contenedor">
+
+                    <section class="body-window">
+                        <div class="main_container"></div>
+                        <div class="frame1">
+                            <table class="tablaShow">
+                                    <thead>
+                                        <tr>
+                                    <th>SELECCION</th>
+                                    <th>MODELO</th>
+                                    <th>NOMBRE</th>
+                                 <th>COLOR</th>  
+                                    <th>TIPO</th>
+                                    <th>ESTADO</th>
+                                    <th>Stock Minimo</th>
+                                 <th>Stock Maximo</th>
+                                    <th>ACTUALIZAR</th>
+                                    <th>ELIMINAR</th>
+                                
+                                        </tr>
+                                    </thead>
+                  
+                                        <!-- Primera fila de datos -->
+                                        <tr>
+                                <td><input type="checkbox"></td>
+                                <td>001</td>
+                                <td>Peluche Oso</td>
+                                <td>Marrón</td>
+                                <td>Osito de peluche</td>
+                                <td>Disponible</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>
+                                    <img src="../rolcliente/img/actualizar.png" width="20" height="20"></a>
+                                </td>
+                                 <td>
+                                   <img src="../rolcliente/img/caneca.jpg" width="20" height="20"></a>
+                                 </td>
+                                        </tr>
+                                        <!-- Segunda fila de datos -->
+                                        <tr>
+                                <td><input type="checkbox"></td>
+                                <td>002</td>
+                                <td>Conejo</td>
+                                <td>Amarillo</td>
+                                <td>Conejito de peluche</td>
+                                <td>Disponible</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>
+                                    <img src="../rolcliente/img/actualizar.png" width="20" height="20"></a>
+                                </td>
+                                 <td>
+                                    <img src="../rolcliente/img/caneca.jpg" width="20" height="20"></a>
+                                 </td>
+                                        </tr>
+                                        <!-- Tercera fila de datos -->
+                                        <tr>
+                                <td><input type="checkbox"></td>
+                                <td>003</td>
+                                <td>Elefante</td>
+                                <td>Gris</td>
+                                <td>Elefante de peluche</td>
+                                <td>Disponible</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>
+                                    <img src="../rolcliente/img/actualizar.png" width="20" height="20"></a>
+                                </td>
+                                 <td>
+                                    <img src="../rolcliente/img/caneca.jpg" width="20" height="20"></a>
+                                 </td>
+                                        </tr>
+                                        <!-- Puedes seguir agregando más filas según sea necesario -->
+                                        <tr>
+                                <td><input type="checkbox"></td>
+                                <td>004</td>
+                                <td>Pantera Rosa</td>
+                                <td>Rosado</td>
+                                <td>Pantera Rosa de peluche</td>
+                                <td>Disponible</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>
+                                    <img src="../rolcliente/img/actualizar.png" width="20" height="20"></a>
+                                </td>
+                                 <td>
+                                    <img src="../rolcliente/img/caneca.jpg" width="20" height="20"></a>
+                                 </td>
+                                        </tr>
+                      
+                            </table>
+                
+                    
+                                    
+                        </div>
+                
+            
+                    </section>
+
+      
+         
+        
+        
+        
+        
+                </div>
+            </div>
+        </div>
+
+            <!-- inicio footer -->
+   <footer>
+    <img id="logofooter" src="img/Log_peluches.png" alt="">
+    <div class="contengotodo">
+      <div class="img">
+        <h3>Contactanos</h3>
+      </div>
+      <div class="texto">
+        <p>Jhoan Camilo Aldana Ramirez</p>
+        <p>Nicol Dayana Guerra Diaz</p>
+        <p>Jostyn Jeanphool Salazar Rincón</p>
+        <p>Johan Andres Ayala Peñuela</p>
+      </div>
+    </div>
+    <div class="datos">
+      <div class="img">
+        <h2>Correos: </h2>
+      </div>
+      <div class="texto">
+        <p>Camilo@gmail.com</p>
+        <p>Nicol@gmail.com</p>
+        <p>Jostyn@gmail.com</p>
+        <p>Johan@gmail.com</p>
+      </div>
+    </div>
+
+  </footer>
+
+        
+       
+ </body>
+</html>                            
+

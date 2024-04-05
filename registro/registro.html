@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_inicio/bootstrap.min.css">
+    <link rel="stylesheet" href="../registro/css/registro.css">
+    <title>Acceso</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <!-- Barra de Navegacion -->
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-danger-subtle">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Formulario -->
+        <div class="row mt-4">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-header d-flex justify-content-center bg-body-tertiary">
+                        <img src="../registro/img/Logo.png" class="card-img-top img-fluid" alt="logo">
+                    </div>
+                    <div class="card-body">
+                        <form action="procesar_formulario.php" method="POST">
+                            <div class="mb-3">
+                                <label for="InputNombres" class="form-label">Nombres</label>
+                                <input type="text" class="form-control" placeholder="ingrese sus nombres"id="InputNombres" name="nombres" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="InputApellidos" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" placeholder="ingrese sus apellidos" id="InputApellidos" name="apellidos" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipoIdent" class="form-label">Tipo de identificación</label>
+                                <select class="form-select" id="tipoIdent" name="tipoIdent" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="CC">Cédula de ciudadanía</option>
+                                    <option value="CE">Cédula de extranjería</option>
+                                    <option value="TI">Tarjeta de identidad</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="InputDocumento" class="form-label">Documento</label>
+                                <input type="int" class="form-control" placeholder="ingrese su numero de documento" id="InputDocumento" name="documento" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="LabelEmail1" class="form-label">Correo</label>
+                                <input type="email" class="form-control" placeholder="ingrese su correo"  id="InputEmail" aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="InputPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" placeholder="ingrese una contraseña" id="InputPassword" name="password" required>
+                            </div>
+                            <div class="container">
+                                <a href="../registro/registro.html" class="btn bg-danger-subtle">Registrar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var form = document.querySelector('.needs-validation');
+      
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              alert('Registrado con éxito.');
+            }
+      
+            form.classList.add('was-validated');
+          });
+        });
+      </script>
+
+</body>
+
+</html>

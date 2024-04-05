@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Angkor&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Tienne:wght@400;700;900&display=swap');
+
+.navbar-brand{
+    width: 8%;
+}
+
+.menu h3{
+    margin: 20px 0;
+    border-bottom: 1px solid #F77F00;
+}
+
+.menu li{
+    padding-left: 25px;
+}
+
+.modal-body{
+    width: 100%;
+    height: auto; }
+
+
+.card{
+    margin-top: 0;
+    background-color: #fff;
+    font-family: "Kalam", cursive;
+    border-radius: 12px;
+    border: 2px solid #000;
+}
+.card:hover{
+    border: 2px solid #000;
+    box-shadow: 4px 4px 6px #000;
+    cursor: pointer;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+table{
+    width: 100%;
+}
+
+.menu i{
+    width: 5%;
+    color: #8dd7ff;
+    padding-right: 3px;
+}
+
+.color1{
+    background: #dfcafc;
+} 
+
+
+.menu li:hover{
+    background: #90E0EF;
+    border-bottom: 1px solid #0077B6;
+    border-top: 1px solid #0077B6;
+    color: #fff;
+    /* text-shadow: 1px 1px 1px #000; */
+}
+
+.imgRol img{
+    width: 40%;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 5px #000;
+    border-radius: 50%;
+}
+
+.cardA:hover{
+    background: #EDF2FB;
+    box-shadow: 0px 0px 3px #90E0EF;
+    border: 1px solid #90E0EF;
+}
+
+footer{
+    background-color:#dfcafc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top:2px solid #fff;
+}
+
+.datos{
+    display: flex;
+}
+
+.letra{
+    font-family: "Oswald", sans-serif;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    margin: 5px;
+    font-family: "Cinzel", serif;
+    font-size: 1vw;
+}
+#logofooter{
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 100px;
+    height: 110px;
+}

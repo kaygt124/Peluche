@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Angkor&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Tienne:wght@400;700;900&display=swap');
+
+
+.card img{
+    width: 30%;
+}
+
+.card{
+    box-shadow: 0px 0px 5px 2px gray;
+}
+
+body{
+    background: linear-gradient(to right, rgb(167, 232, 243), rgb(177, 128, 166));
+}
+
+.container {
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
+
+.form-label{
+    font-family: "Oswald", sans-serif;
+}
+
+.row{
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+

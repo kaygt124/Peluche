@@ -1,0 +1,19 @@
+.fotos{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.fotos img{
+    width: 25%;
+    flex: 1 300px;
+    margin: 10px;
+}
+
+.icono{
+
+}
+
+.icono img{
+    width: 20px;
+}

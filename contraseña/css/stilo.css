@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Angkor&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Tienne:wght@400;700;900&display=swap');
+
+body{
+    background: linear-gradient(to right, rgb(167, 232, 243), rgb(177, 128, 166));
+   
+}
+.btn{
+    font-family: "Oswald", sans-serif;
+
+}
+/*Barra de navegacion*/
+nav{
+    background:#ffccdd;
+    padding: 10px 50px;
+    border-bottom: 4px solid #ff9696 ;
+    text-align: right;
+}
+nav a{
+    text-decoration: none;
+    padding-right:  20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 200;
+    text-shadow: 2px 2px #ffffff;
+    color:#000000;
+    /*display: block; */ 
+}
+nav a:hover{
+    color: #000000;
+    text-shadow: 1px 1px #fefefe;
+    background: #5390D9;
+
+}
+
+
+/*contenido main*/
+main img{
+    width: 50%;
+    margin-top: 5px;
+}
+article{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    
+    
+}
+
+.image-container {
+    text-align: center;
+    /* Centra horizontalmente la imagen */
+    margin-bottom: 20px;
+    /* Espacio entre la imagen y los otros campos */
+   
+}
+
+.image-container img {
+    border-radius: 50%;
+    /* Da forma de círculo a la imagen */
+    width: 100px;
+    /* Ancho deseado */
+    height: 100px;
+    /* Alto deseado */
+    
+} 
+
+.card-body{
+    margin-top: 5px;
+}

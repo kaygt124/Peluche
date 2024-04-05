@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Angkor&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Tienne:wght@400;700;900&display=swap');
+
+
+
+.row{
+    align-items: center;
+}
+
+.letra{
+    font-family: "Oswald", sans-serif;
+}
+footer{
+    background-color:#dfcafc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top:2px solid #fff;
+}
+
+.datos{
+    display: flex;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    margin: 5px;
+    font-family: "Cinzel", serif;
+    font-size: 1vw;
+}
+#logofooter{
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 200px;
+    height: 120px;
+}

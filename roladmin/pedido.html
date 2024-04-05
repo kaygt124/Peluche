@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../roladmin/css/Admin.css">
+  <link rel="stylesheet" href="../iconos/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css">
+  <title>XMas C.N.J.J Administrador</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <!-- 1 fila: Barra de Navegacion -->
+    <div class="color1  row ">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg ">
+
+          <img class="navbar-brand" src="../roladmin/img/log_peluches.png">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../errores/404.html"><i class="fa-solid fa-bell"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../iniciovalido.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+    <!-- 2 fila: 1 columna: Menu de funcionalidades / 2 columna: Cargan los forms y contenidos -->
+    <div class="row">
+      <div class=" color1 col-md-3  menu">
+
+        <!-- Rol -->
+
+        <div class="imgRol text-center mt-4 mb-3">
+          <img src="../roladmin/img/usuario.png" alt="usuario">
+        </div>
+        <div class="infoRol text-center">
+          <h5>PREDO SUIZA</h5>
+          <h6>Administrador</h6>
+        </div>
+        <div class="botonPerfil text-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Ver Perfil
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-body">
+                  <!-- contenido: card -->
+                  <div class="card">
+                    <img src="../roladmin/img/usuario.png" class="card-img-top img-fluid" alt="">
+                    <div class="card-body">
+                      <h3 class="display-6">PEDRO SUIZA</h3>
+                      <h4>Rol Administrador</h4>	
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Modificar Informacion</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Menu de funcionalidades -->
+
+        <h3>Pedido</h3>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../catalogo/catalogo.html">Catalogo</i></a></li>
+          <li class="nav-item"><a class="nav-link" href="../roladmin/dashboardadmin.html">Ventas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../roladmin/pedido.html">Pedido</a></li>
+          <li class="nav-item"><a class="nav-link" href="../roladmin/ventas.html">Generar Venta</a></li>
+        </ul>
+
+        <!-- 2 columna de contenido -->
+
+          <h3>Inventario</h3>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="../roladmin/inventario.html">Inventario</i></a></li>
+            <li class="nav-item"><a class="nav-link" href="producto.html ">Crear Un Producto</a></li>
+          
+          </ul>
+
+
+       
+      </div>
+      <!--  columna de contenido -->
+      <div class="col-md-9">
+        <div class="row pt-3">
+          <div class="col-md-3 col-sm-2 d-flex justify-content-around text-center">
+            
+          </div>
+
+          <div class="col-md-3 sm-2 d-flex justify-content-around text-center">
+            <a href="#" class="nav-link">
+          </div>
+
+          <div class="col-md-3 sm-2 d-flex justify-content-around text-center">
+          </div>
+
+          <div class="col-md-3 sm-2 d-flex justify-content-around text-center">
+          </div>
+        </div>
+        <div class="row pt-7 pb-7 justify-content-around">
+          <div class="col-12" id="catalogo">
+            <h2 class="letra" >PEDIDO</h2>
+          </div>
+
+          <div class="row pt-7 pb-7 justify-content-around">
+            <div class="col">
+              <!-- Inicio de la Tabla -->
+
+            <div class="table-responsive">
+              <table id="solicitudes" class="table table-striped table-bordered">
+          
+                
+                <thead>
+                    <tr>
+                      <th>Cliente</th>
+                      <th>Dirección</th>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>Fecha</th>   
+                      <th>Numero</th>
+                      <th>Metodo De Pago</th>              
+                      <th>Total</th>       
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>María Pérez</td>
+                      <td>Calle A, #123</td>
+                      <td>Oso de peluche</td>
+                      <td>2</td>
+                      <td>2024-03-24</td>
+                      <td>maria@example.com</td>
+                      <td>1234567890</td>
+                      <td>nequi</td>
+                      <td>30.000</td>
+                    </tr>
+                    <tr>
+                      <td>Juan López</td>
+                      <td>Avenida B, #456</td>
+                      <td>Conejo de peluche</td>
+                      <td>1</td>
+                      <td>2024-03-25</td>
+                      <td>juan@example.com</td>
+                      <td>2345678901</td>
+                      <td>nequi</td>
+                      <td>25.000 </td>
+                    </tr>
+                    <tr>
+                      <td>Laura García</td>
+                      <td>Calle C, #789</td>
+                      <td>Elefante de peluche</td>
+                      <td>3</td>
+                      <td>2024-03-26</td>
+                      <td>laura@example.com</td>
+                      <td>3456789012</td>
+                      <td> daviplata</td>
+                      <td> 105.000</td>
+                    </tr>
+                    <tr>
+                      <td>Carlos Martínez</td>
+                      <td>Avenida D, #1011</td>
+                      <td>Cocodrilo</td>
+                      <td>1</td>
+                      <td>2024-03-27</td>
+                      <td>carlos@example.com</td>
+                      <td>4567890123</td>
+                      <td>PSE</td>
+                      <td>18.000</td>
+                    </tr>
+                    <tr>
+                      <td>Sofía Rodríguez</td>
+                      <td>Calle E, #1213</td>
+                      <td>Minions</td>
+                      <td>2</td>
+                      <td>2024-03-28</td>
+                      <td>sofia@example.com</td>
+                      <td>5678901234</td>
+                      <td>Efectivo </td>
+                      <td>64.000</td>
+                    </tr>
+                    <tr>
+                      <td>Diego Sánchez</td>
+                      <td>Avenida F, #1415</td>
+                      <td>Pantera Rosa</td>
+                      <td>1</td>
+                      <td>2024-03-29</td>
+                      <td>diego@example.com</td>
+                      <td>6789012345</td>
+                      <td>Bancolombia</td>
+                      <td>54.000</td>
+                    </tr>
+                    <tr>
+                      <td>Ana Torres</td>
+                      <td>Calle G, #1617</td>
+                      <td>Cerdito</td>
+                      <td>2</td>
+                      <td>2024-03-30</td>
+                      <td>ana@example.com</td>
+                      <td>7890123456</td>
+                      <td>Efectivo </td>
+                      <td>36.000 </td>
+                    </tr>
+                    <tr>
+                      <td>Javier Gómez</td>
+                      <td>Avenida H, #1819</td>
+                      <td>Elefante</td>
+                      <td>1</td>
+                      <td>2024-03-31</td>
+                      <td>javier@example.com</td>
+                      <td>8901234567</td>
+                      <td>PSE</td>
+                      <td>35.000</td>
+                    </tr>
+              </table>
+        
+              <!-- Fin de la Tabla -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+   <!-- inicio footer -->
+   <footer>
+    <img id="logofooter" src="img/Log_peluches.png" alt="">
+    <div class="contengotodo">
+      <div class="img">
+        <h3>Contactanos</h3>
+      </div>
+      <div class="texto">
+        <p>Jhoan Camilo Aldana Ramirez</p>
+        <p>Nicol Dayana Guerra Diaz</p>
+        <p>Jostyn Jeanphool Salazar Rincón</p>
+        <p>Johan Andres Ayala Peñuela</p>
+      </div>
+    </div>
+    <div class="datos">
+      <div class="img">
+        <h2>Correos: </h2>
+      </div>
+      <div class="texto">
+        <p>Camilo@gmail.com</p>
+        <p>Nicol@gmail.com</p>
+        <p>Jostyn@gmail.com</p>
+        <p>Johan@gmail.com</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+  <script>
+    new DataTable('#solicitudes');
+  </script>
+</body>
+
+</html>
